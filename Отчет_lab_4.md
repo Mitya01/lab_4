@@ -117,7 +117,8 @@ docker network inspect myNetwork
     }
 ]
 
-![Снимок экрана 2024-12-26 183517](https://github.com/user-attachments/assets/89826d2f-fe89-4ed2-9cb4-f73578160c9b)
+Между машинами должна быть связь:
+![Снимок экрана 2024-12-26 183517](https://github.com/user-attachments/assets/e08073e4-56fb-4605-814d-e199560f9304)
 
 
 
