@@ -116,9 +116,12 @@ docker network inspect myNetwork
         "Labels": {}
     }
 ]
+```
 
 Между машинами должна быть связь:
-![Снимок экрана 2024-12-26 183517](https://github.com/user-attachments/assets/e08073e4-56fb-4605-814d-e199560f9304)
+
+![image](https://github.com/user-attachments/assets/eec82f20-f970-4450-a0fb-d048699fc845)
+
 
 
 
