@@ -97,6 +97,28 @@ docker network connect myNetwork mycontainer2
 docker network inspect myNetwork
 ```
 
+Такой вывод будет:
+```json
+[
+    {
+        "Name": "myNetwork",
+        "Id": "...",
+        "Created": "...",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": { ... },
+        "Containers": {
+            "mycontainer1": { ... },
+            "mycontainer2": { ... }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+
+![image](https://github.com/user-attachments/assets/9ac5234b-2573-4251-9076-a6ca93472f66)
+
 
 
 
