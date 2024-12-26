@@ -71,8 +71,8 @@ docker build -t aafire_image:latest .
 
 Затем запущены 2 терминала:
 ```bash
-docker run -it aafire_image
-docker run -it aafire_image
+docker run -it aafire_image:latest
+docker run -it aafire_image:latest
 ```
 
 ![Снимок экрана 2024-12-06 164022](https://github.com/user-attachments/assets/a1f9e169-0242-4230-8183-9e73c48f4ec3)
