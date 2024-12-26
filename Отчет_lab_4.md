@@ -43,6 +43,64 @@ docker network inspect myNetwork
 
 ## Выполнение задания
 
+Создан Dockerfile с базовым образом Ubuntu.
+В Dockerfile добавлены команды для установки необходимых пакетов:
+  - `aafire`: приложение для визуализации.
+  - `iputils-ping`: утилита для проверки сетевого соединения.
+
+Содержимое файла `Dockerfile`:
+```dockerfile
+FROM ubuntu:latest
+
+# Установка необходимых пакетов
+RUN apt-get update && \
+    apt-get install -y libaa-bin iputils-ping && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Запуск приложения aafire
+CMD ["aafire"]
+```
+
+`apt-get clean  && rm -rf /var/lib/apt/lists/*` использовались для очистки память, потому что приложение заполняло много места
+
+Сборка контейнера:
+```bash
+docker build -t aafire_image:latest .
+```
+
+Затем запущены 2 терминала:
+```bash
+docker run -it aafire_image
+docker run -it aafire_image
+```
+
+![Снимок экрана 2024-12-06 164022](https://github.com/user-attachments/assets/a1f9e169-0242-4230-8183-9e73c48f4ec3)
+
+Для удобства переименовываны контейнеры
+```bash
+docker rename my_container_name_1 mycontainer1
+docker rename my_container_name_2 mycontainer2
+```
+
+Открыто ещё одно окно терминала и создана сеть при помощи команды 
+```
+docker network create myNetwork
+```
+После этого контейнеры подключены к сети.
+```
+docker network connect myNetwork mycontainer1
+docker network connect myNetwork mycontainer2
+```
+Теперь при помощи следующей команды можно увидеть настройки созданной вами сети.
+```
+docker network inspect myNetwork
+```
+
+
+
+
+
 
 
 
