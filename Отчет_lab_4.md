@@ -117,9 +117,7 @@ docker network inspect myNetwork
     }
 ]
 
-![image](https://github.com/user-attachments/assets/b7cb30e6-2f25-4301-8131-fa72137788e2)
-
-
+![Снимок экрана 2024-12-26 183517](https://github.com/user-attachments/assets/89826d2f-fe89-4ed2-9cb4-f73578160c9b)
 
 
 
